@@ -1,1 +1,1 @@
-docker build --pull --rm -f 'py.Dockerfile' -t 'pyservice:latest' '.' 
+docker build --no-cache --pull --rm -f 'go.Dockerfile' -t 'goservice:latest' '.' 
