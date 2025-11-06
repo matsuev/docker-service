@@ -1,25 +1,27 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
+	"os"
 )
 
-// var (
-// 	dbUser = ""
-// 	dbHost = ""
-// 	dbPort = ""
-// 	dbPass = ""
-// )
+var (
+	dbUser = ""
+	dbHost = ""
+	dbPort = ""
+	dbPass = ""
+)
 
-// func init() {
-// 	dbHost, _ = os.LookupEnv("DB_HOST")
-// 	dbPort, _ = os.LookupEnv("DB_PORT")
-// 	dbUser, _ = os.LookupEnv("DB_USER")
-// 	dbPass, _ = os.LookupEnv("DB_PASS")
-// }
+func init() {
+	dbHost, _ = os.LookupEnv("DB_HOST")
+	dbPort, _ = os.LookupEnv("DB_PORT")
+	dbUser, _ = os.LookupEnv("DB_USER")
+	dbPass, _ = os.LookupEnv("DB_PASS")
+}
 
 func main() {
-	// fmt.Println(dbHost, dbPort, dbUser, dbPass)
+	fmt.Println(dbHost, dbPort, dbUser, dbPass)
 
 	http.HandleFunc("/", rootHandler)
 
