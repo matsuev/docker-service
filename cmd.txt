@@ -1,0 +1,1 @@
+docker build --pull --rm -f 'py.Dockerfile' -t 'pyservice:latest' '.' 
